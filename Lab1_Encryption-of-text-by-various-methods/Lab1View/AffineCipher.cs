@@ -10,12 +10,6 @@ namespace Lab1View
 	public class AffineCipher
 	{
 		static string UkrainianAlphabet = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
-<<<<<<< HEAD
-		static string UkrainianAlphabet1 = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
-		static string UkrainianAlphabet2 = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
-		static string UkrainianAlphabet3 = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
-=======
->>>>>>> origin/main
 
 
 		// Функція для шифрування тексту
