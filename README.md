@@ -1,1 +1,1 @@
-# JIiKeY-Basics-of-Cryptographic-Security
+Лаболаторні роботи по Basics of Cryptographic Security
