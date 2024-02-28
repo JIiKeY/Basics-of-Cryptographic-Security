@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab1View
 {
 	public class AffineCipher
 	{
-		static string UkrainianAlphabet = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
-
-
+		static readonly string UkrainianAlphabet = "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
 		// Функція для шифрування тексту
 		public static string Encrypt(string text, int a, int b)
 		{
@@ -34,7 +28,6 @@ namespace Lab1View
 					result += ch;
 				}
 			}
-
 			return result;
 		}
 
@@ -71,7 +64,6 @@ namespace Lab1View
 					result += ch;
 				}
 			}
-
 			return result;
 		}
 	}

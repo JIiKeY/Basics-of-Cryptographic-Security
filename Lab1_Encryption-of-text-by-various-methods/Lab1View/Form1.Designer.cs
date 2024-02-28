@@ -390,7 +390,7 @@
 			this.findKeyBtn.TabIndex = 17;
 			this.findKeyBtn.Text = "Encript";
 			this.findKeyBtn.UseVisualStyleBackColor = true;
-			this.findKeyBtn.Click += new System.EventHandler(this.findKeyBtn_Click);
+			this.findKeyBtn.Click += new System.EventHandler(this.FindKeyBtn_Click);
 			// 
 			// listBoxKeys
 			// 

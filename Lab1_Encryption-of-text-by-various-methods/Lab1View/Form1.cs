@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web;
 using System.Windows.Forms;
 
 namespace Lab1View
@@ -20,7 +19,11 @@ namespace Lab1View
 
 			string sentence = textSent.Text;
 
-			if (lenKey == 0 || sentence.Length == 0)
+			if (indexComBox == -1)
+			{
+				MessageBox.Show("Виберіть метод шифрування", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if (lenKey == 0 || sentence.Length == 0)
 				MessageBox.Show("Поля мають бути заповненими", "Помилка!",
 					MessageBoxButtons.OK, MessageBoxIcon.Error);
 			
@@ -69,8 +72,11 @@ namespace Lab1View
 			string SecondKey = decriptSecondKey.Text;
 
 			string encriptSent = encriptText.Text;
-
-			if (lenKey == 0 || encriptSent.Length == 0)
+			if (indexComBox == -1)
+			{
+				MessageBox.Show("Виберіть метод шифрування", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+			else if (lenKey == 0 || encriptSent.Length == 0)
 				MessageBox.Show("Поля мають бути заповненими", "Помилка!",
 					MessageBoxButtons.OK, MessageBoxIcon.Error);
 			
@@ -111,12 +117,11 @@ namespace Lab1View
 				}
 			}
 		}
-		private void findKeyBtn_Click(object sender, EventArgs e)
+		private void FindKeyBtn_Click(object sender, EventArgs e)
 		{
 			string enMess;
 			string decriptMess = decryptedMessBox.Text.ToLower();
 			string encriptMess = encriptedMessBox.Text.ToLower();
-			bool flag = false;
 			listBoxKeys.Items.Clear();
 
 			for (int i = 1; i < 34; i++)

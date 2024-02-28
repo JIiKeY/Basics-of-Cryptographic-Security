@@ -7,7 +7,7 @@ namespace Lab1View
 	internal class PleyfraCipher
 	{
 		static string alphabet = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ";
-		static char[,] tablePleyfra = new char[6, 6];
+		static readonly char[,] tablePleyfra = new char[6, 6];
 		public static string DecriptPleyfraMessage(string encriptMessage, string key)
 		{
 			key = RemoveDuplicates(key);
@@ -58,7 +58,7 @@ namespace Lab1View
 			}
 			return decriptMessage;
 		}
-		static void ShowTable(char[,] table)
+		private static void ShowTable(char[,] table)
 		{
 			for (int i = 0; i < table.GetLength(0); i++)
 			{
@@ -121,12 +121,6 @@ namespace Lab1View
 				{
 					encriptMessage += (tablePleyfra[rowIndex1, colIndex2].ToString() + tablePleyfra[rowIndex2, colIndex1]);
 				}
-				/*
-				else //
-				{
-					encriptMessage += ((tablePleyfra[rowIndex1, colIndex1]).ToString() + tablePleyfra[rowIndex2, colIndex2]);
-				}
-				*/
 			}
 			return encriptMessage;
 		}
