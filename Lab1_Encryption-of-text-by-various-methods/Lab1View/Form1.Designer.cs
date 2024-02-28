@@ -56,14 +56,14 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.label7 = new System.Windows.Forms.Label();
+			this.label15 = new System.Windows.Forms.Label();
+			this.findKeyBtn = new System.Windows.Forms.Button();
+			this.listBoxKeys = new System.Windows.Forms.ListBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.decryptedMessBox = new System.Windows.Forms.TextBox();
 			this.encriptedMessBox = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
-			this.listBoxKeys = new System.Windows.Forms.ListBox();
-			this.findKeyBtn = new System.Windows.Forms.Button();
-			this.label15 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -129,6 +129,7 @@
 			this.comboBox1.FormattingEnabled = true;
 			this.comboBox1.Items.AddRange(new object[] {
             "Шифр Плейфра",
+            "Шифр Виженера",
             "Аффинный шифр"});
 			this.comboBox1.Location = new System.Drawing.Point(18, 107);
 			this.comboBox1.Name = "comboBox1";
@@ -274,6 +275,7 @@
 			this.comboBox2.FormattingEnabled = true;
 			this.comboBox2.Items.AddRange(new object[] {
             "Шифр Плейфра",
+            "Шифр Виженера",
             "Аффинный шифр"});
 			this.comboBox2.Location = new System.Drawing.Point(19, 107);
 			this.comboBox2.Name = "comboBox2";
@@ -370,15 +372,35 @@
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Find Keys";
 			// 
-			// label7
+			// label15
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("ROG Fonts", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(117, 9);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(192, 32);
-			this.label7.TabIndex = 1;
-			this.label7.Text = "Find Keys";
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("AniMe Matrix - MB_EN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label15.Location = new System.Drawing.Point(20, 188);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(263, 19);
+			this.label15.TabIndex = 18;
+			this.label15.Text = "Possible key options:";
+			// 
+			// findKeyBtn
+			// 
+			this.findKeyBtn.Location = new System.Drawing.Point(123, 114);
+			this.findKeyBtn.Name = "findKeyBtn";
+			this.findKeyBtn.Size = new System.Drawing.Size(202, 54);
+			this.findKeyBtn.TabIndex = 17;
+			this.findKeyBtn.Text = "Encript";
+			this.findKeyBtn.UseVisualStyleBackColor = true;
+			this.findKeyBtn.Click += new System.EventHandler(this.findKeyBtn_Click);
+			// 
+			// listBoxKeys
+			// 
+			this.listBoxKeys.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.listBoxKeys.FormattingEnabled = true;
+			this.listBoxKeys.ItemHeight = 18;
+			this.listBoxKeys.Location = new System.Drawing.Point(18, 210);
+			this.listBoxKeys.Name = "listBoxKeys";
+			this.listBoxKeys.Size = new System.Drawing.Size(408, 220);
+			this.listBoxKeys.TabIndex = 16;
 			// 
 			// label13
 			// 
@@ -416,35 +438,15 @@
 			this.label14.TabIndex = 12;
 			this.label14.Text = "Encripted mess:";
 			// 
-			// listBoxKeys
+			// label7
 			// 
-			this.listBoxKeys.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.listBoxKeys.FormattingEnabled = true;
-			this.listBoxKeys.ItemHeight = 18;
-			this.listBoxKeys.Location = new System.Drawing.Point(18, 210);
-			this.listBoxKeys.Name = "listBoxKeys";
-			this.listBoxKeys.Size = new System.Drawing.Size(408, 220);
-			this.listBoxKeys.TabIndex = 16;
-			// 
-			// findKeyBtn
-			// 
-			this.findKeyBtn.Location = new System.Drawing.Point(123, 114);
-			this.findKeyBtn.Name = "findKeyBtn";
-			this.findKeyBtn.Size = new System.Drawing.Size(202, 54);
-			this.findKeyBtn.TabIndex = 17;
-			this.findKeyBtn.Text = "Encript";
-			this.findKeyBtn.UseVisualStyleBackColor = true;
-			this.findKeyBtn.Click += new System.EventHandler(this.findKeyBtn_Click);
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Font = new System.Drawing.Font("AniMe Matrix - MB_EN", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label15.Location = new System.Drawing.Point(20, 188);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(263, 19);
-			this.label15.TabIndex = 18;
-			this.label15.Text = "Possible key options:";
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("ROG Fonts", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.Location = new System.Drawing.Point(117, 9);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(192, 32);
+			this.label7.TabIndex = 1;
+			this.label7.Text = "Find Keys";
 			// 
 			// Form1
 			// 
