@@ -28,3 +28,13 @@ D:\Cyber Security\Basics of Cryptographic Security\JIiKeY-Basics-of-Cryptographi
 D:\Cyber Security\Basics of Cryptographic Security\JIiKeY-Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.csproj.CoreCompileInputs.cache
 D:\Cyber Security\Basics of Cryptographic Security\JIiKeY-Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.exe
 D:\Cyber Security\Basics of Cryptographic Security\JIiKeY-Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.pdb
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\bin\Debug\Lab1View.exe.config
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\bin\Debug\Lab1View.exe
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\bin\Debug\Lab1View.pdb
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.csproj.AssemblyReference.cache
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.Form1.resources
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.Properties.Resources.resources
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.csproj.GenerateResource.cache
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.csproj.CoreCompileInputs.cache
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.exe
+D:\Repos\Basics-of-Cryptographic-Security\Lab1_Encryption-of-text-by-various-methods\Lab1View\obj\Debug\Lab1View.pdb

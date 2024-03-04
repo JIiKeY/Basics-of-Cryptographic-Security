@@ -136,12 +136,14 @@
 			this.comboBox1.Size = new System.Drawing.Size(137, 26);
 			this.comboBox1.TabIndex = 9;
 			this.comboBox1.Text = "Виберіть шифр";
+			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// encriptTextBox
 			// 
 			this.encriptTextBox.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.encriptTextBox.Location = new System.Drawing.Point(18, 297);
 			this.encriptTextBox.Name = "encriptTextBox";
+			this.encriptTextBox.ReadOnly = true;
 			this.encriptTextBox.Size = new System.Drawing.Size(369, 28);
 			this.encriptTextBox.TabIndex = 8;
 			// 
@@ -282,12 +284,14 @@
 			this.comboBox2.Size = new System.Drawing.Size(137, 26);
 			this.comboBox2.TabIndex = 18;
 			this.comboBox2.Text = "Виберіть шифр";
+			this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
 			// 
 			// decriptText
 			// 
 			this.decriptText.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.decriptText.Location = new System.Drawing.Point(18, 297);
 			this.decriptText.Name = "decriptText";
+			this.decriptText.ReadOnly = true;
 			this.decriptText.Size = new System.Drawing.Size(369, 28);
 			this.decriptText.TabIndex = 17;
 			// 
@@ -390,7 +394,7 @@
 			this.findKeyBtn.TabIndex = 17;
 			this.findKeyBtn.Text = "Encript";
 			this.findKeyBtn.UseVisualStyleBackColor = true;
-			this.findKeyBtn.Click += new System.EventHandler(this.FindKeyBtn_Click);
+			this.findKeyBtn.Click += new System.EventHandler(this.findKeyBtn_Click);
 			// 
 			// listBoxKeys
 			// 

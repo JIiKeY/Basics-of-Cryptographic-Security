@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using System.Windows.Forms;
 
 namespace Lab1View
@@ -8,6 +9,20 @@ namespace Lab1View
 		public Form1()
 		{
 			InitializeComponent();
+			comboBox1.SelectionChangeCommitted += ComboBox1_SelectionChangeCommitted;
+		}
+		private void ComboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+		{
+			if (comboBox1.SelectedItem.ToString() == "Шифр Плейфра" || comboBox1.SelectedItem.ToString() == "Шифр Виженера")
+			{
+				decriptSecondKey.Hide();
+				label11.Hide();
+			}
+			else
+			{
+				decriptSecondKey.Hide();
+				label11.Hide();
+			}
 		}
 		private void EncriptBtn_Click(object sender, EventArgs e)
 		{
@@ -19,11 +34,7 @@ namespace Lab1View
 
 			string sentence = textSent.Text;
 
-			if (indexComBox == -1)
-			{
-				MessageBox.Show("Виберіть метод шифрування", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-			else if (lenKey == 0 || sentence.Length == 0)
+			if (lenKey == 0 || sentence.Length == 0)
 				MessageBox.Show("Поля мають бути заповненими", "Помилка!",
 					MessageBoxButtons.OK, MessageBoxIcon.Error);
 			
@@ -72,11 +83,8 @@ namespace Lab1View
 			string SecondKey = decriptSecondKey.Text;
 
 			string encriptSent = encriptText.Text;
-			if (indexComBox == -1)
-			{
-				MessageBox.Show("Виберіть метод шифрування", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-			else if (lenKey == 0 || encriptSent.Length == 0)
+
+			if (lenKey == 0 || encriptSent.Length == 0)
 				MessageBox.Show("Поля мають бути заповненими", "Помилка!",
 					MessageBoxButtons.OK, MessageBoxIcon.Error);
 			
@@ -117,11 +125,12 @@ namespace Lab1View
 				}
 			}
 		}
-		private void FindKeyBtn_Click(object sender, EventArgs e)
+		private void findKeyBtn_Click(object sender, EventArgs e)
 		{
 			string enMess;
 			string decriptMess = decryptedMessBox.Text.ToLower();
 			string encriptMess = encriptedMessBox.Text.ToLower();
+			bool flag = false;
 			listBoxKeys.Items.Clear();
 
 			for (int i = 1; i < 34; i++)
@@ -141,6 +150,38 @@ namespace Lab1View
 			if (listBoxKeys.Items.Count == 0)
 			{
 				listBoxKeys.Items.Add("No keys were found for this encryption");
+			}
+		}
+
+		private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (comboBox2.SelectedIndex == 0 || comboBox2.SelectedIndex == 1)
+			{
+				decriptSecondKey.Hide();
+				label11.Hide();
+				label12.Text = "Key";
+			}
+			else
+			{
+				decriptSecondKey.Show();
+				label11.Show();
+				label12.Text = "First Key";
+			}
+		}
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 1)
+			{
+				SecondKeyBox.Hide();
+				label10.Hide();
+				label3.Text = "Key";
+			}
+			else
+			{
+				SecondKeyBox.Show();
+				label10.Show();
+				label3.Text = "First Key";
 			}
 		}
 	}

@@ -1,9 +1,15 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Lab1View
 {
+	
 	internal class VigenèreCipher
 	{
-		static readonly string alphabet = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ";
+		static string alphabet = "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ";
 		public static string Decript(string criptMessage, string key)
 		{
 			int M, C, K;
@@ -35,16 +41,26 @@ namespace Lab1View
 		}
 		static string KeyModify(string key, string message)
 		{
-			while (key.Length != message.Length)
+			int messageLen = message.Length;
+			while (key.Length != messageLen)
 			{
-				for (int i = 0; i < key.Length; i++)
+				if(key.Length < messageLen)
 				{
-					key += key[i];
-					if (message.Length == key.Length)
-						break;
+					for (int i = 0; i < key.Length; i++)
+					{
+						key += key[i];
+						if (messageLen == key.Length)
+							return key;
+					}
+				}
+				else if (key.Length > messageLen) 
+				{
+					key = key.Substring(0, messageLen);
+					return key;
 				}
 			}
 			return key;
+			
 		}
 	}
 }
